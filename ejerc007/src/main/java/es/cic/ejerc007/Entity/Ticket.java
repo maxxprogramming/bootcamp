@@ -13,6 +13,16 @@ public class Ticket {
 	private Sesion sesion;
 	private double precioTotal;
 	
+	
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public List<Butaca> getButacas() {
 		return butacas;
 	}

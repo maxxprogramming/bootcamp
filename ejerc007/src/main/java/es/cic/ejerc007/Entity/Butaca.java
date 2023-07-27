@@ -5,12 +5,19 @@ import jakarta.persistence.Entity;
 @Entity
 public class Butaca {
 
+	private long id;
 	private Boolean comprada;
 	private Sala sala;
 	private Sesion sesion;
 	private double precio;
 	
 	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 	public Boolean getComprada() {
 		return comprada;
 	}

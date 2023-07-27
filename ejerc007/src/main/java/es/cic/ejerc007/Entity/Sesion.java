@@ -5,11 +5,20 @@ import jakarta.persistence.Entity;
 @Entity
 public class Sesion {
 
+	private long id;
 	private String pelicula;
 	private String horario;
 	private Sala sala;
 	
 	
+	
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 	public String getPelicula() {
 		return pelicula;
 	}

@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 @Entity
 public class Sala {
 
+	private long id;
 	private List<Butaca> butacas;
 	private List<Sesion> sesiones;
 	
@@ -16,6 +17,21 @@ public class Sala {
 		sesiones = new ArrayList<Sesion>();
 	}
 	
+	
+	public long getId() {
+		return id;
+	}
+
+
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+
+
 	public List<Sesion> getSesiones() {
 		return sesiones;
 	}
