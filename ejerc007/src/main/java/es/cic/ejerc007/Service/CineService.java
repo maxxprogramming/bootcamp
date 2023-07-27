@@ -2,6 +2,7 @@ package es.cic.ejerc007.Service;
 
 
 import es.cic.ejerc007.Entity.Cine;
+import es.cic.ejerc007.Entity.Sala;
 import es.cic.ejerc007.Entity.Ticket;
 
 public interface CineService {
