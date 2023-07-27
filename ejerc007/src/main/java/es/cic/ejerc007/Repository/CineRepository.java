@@ -10,10 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CineRepository extends CrudRepository<Cine, Long> {
 
-	void save(Sala sala);
-	
-	
-	 
 }
 
 
