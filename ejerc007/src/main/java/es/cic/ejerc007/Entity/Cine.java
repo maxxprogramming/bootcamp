@@ -15,7 +15,7 @@ public class Cine {
 	public Sala[] getSalas() {
 		return salas;
 	}
-
+ 
 	public void setSalas(Sala[] salas) {
 		this.salas = salas;
 	}
