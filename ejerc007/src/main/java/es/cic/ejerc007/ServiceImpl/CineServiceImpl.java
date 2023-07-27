@@ -36,7 +36,9 @@ public class CineServiceImpl implements CineService {
 	@Override
 	public void crearCine(Cine cine) {
 		cineRepo.save(cine);
-
+		if(cine == null) {
+			this.cine=cine;
+		}
 	}
 
 	@Override
@@ -61,8 +63,10 @@ public class CineServiceImpl implements CineService {
 	public void Comprar(Ticket ticket) {
 		Sala sala = ticket.getSala();
 		Sesion sesion =  ticket.getSesion();
-		List<Butaca> butacasLibres = sala.getButacas().stream().filter(b -> butacasLibres);
-		ticketRepo.save(ticket);
+		List<Butaca> butacasLibres = sala.getButacas().stream().filter(butaca -> butaca.getComprada()== false).toList();
+		if(butacasLibres.containsAll(butacasLibres)) {
+			ticketRepo.save(ticket);			
+		}
 
 	}
 
