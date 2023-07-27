@@ -1,4 +1,4 @@
-package es.cic.ejerc007Repository;
+package es.cic.ejerc007.Repository;
 
 
 import es.cic.ejerc007.Entity.Cine;
@@ -12,5 +12,10 @@ public interface CineRepository extends CrudRepository<Cine, Long> {
 	
 	
 }
+
+
+
+
+
 
 
