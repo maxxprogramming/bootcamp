@@ -9,11 +9,10 @@ import jakarta.persistence.Entity;
 public class Sala {
 
 	private long id;
-	private List<Butaca> butacas;
+	private int butacas;
 	private List<Sesion> sesiones;
 	
 	public Sala() {
-		butacas = new ArrayList<Butaca>();
 		sesiones = new ArrayList<Sesion>();
 	}
 	
@@ -22,15 +21,9 @@ public class Sala {
 		return id;
 	}
 
-
-
-
 	public void setId(long id) {
 		this.id = id;
 	}
-
-
-
 
 	public List<Sesion> getSesiones() {
 		return sesiones;
@@ -40,11 +33,11 @@ public class Sala {
 		this.sesiones = sesiones;
 	}
 
-	public List<Butaca> getButacas() {
+	public int getButacas() {
 		return butacas;
 	}
 
-	public void setButacas(List<Butaca> butacas) {
+	public void setButacas(int butacas) {
 		this.butacas = butacas;
 	}
 

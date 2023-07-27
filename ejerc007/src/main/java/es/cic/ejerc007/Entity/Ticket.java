@@ -1,14 +1,12 @@
 package es.cic.ejerc007.Entity;
 
-import java.util.List;
-
 import jakarta.persistence.Entity;
 
 @Entity
 public class Ticket {
 
 	private long id;
-	private List<Butaca> butacas;
+	private int butacas;
 	private Sala sala;
 	private Sesion sesion;
 	private static double precioTotal= 5;
@@ -23,11 +21,11 @@ public class Ticket {
 		this.id = id;
 	}
 
-	public List<Butaca> getButacas() {
+	public int getButacas() {
 		return butacas;
 	}
 
-	public void setButacas(List<Butaca> butacas) {
+	public void setButacas(int butacas) {
 		this.butacas = butacas;
 	}
 

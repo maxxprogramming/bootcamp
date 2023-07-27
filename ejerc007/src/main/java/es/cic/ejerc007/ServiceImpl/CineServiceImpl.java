@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import es.cic.ejerc007.Entity.Butaca;
 import es.cic.ejerc007.Entity.Cine;
 import es.cic.ejerc007.Entity.Sala;
 import es.cic.ejerc007.Entity.Sesion;
@@ -61,12 +59,7 @@ public class CineServiceImpl implements CineService {
 
 	@Override
 	public void Comprar(Ticket ticket) {
-		Sala sala = ticket.getSala();
-		Sesion sesion =  ticket.getSesion();
-		List<Butaca> butacasLibres = sala.getButacas().stream().filter(butaca -> butaca.getComprada()== false).toList();
-		if(butacasLibres.containsAll(butacasLibres)) {
-			ticketRepo.save(ticket);			
-		}
+		
 
 	}
 
