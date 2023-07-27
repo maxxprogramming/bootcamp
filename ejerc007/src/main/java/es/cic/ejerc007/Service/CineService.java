@@ -1,50 +1,24 @@
 package es.cic.ejerc007.Service;
 
 
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import es.cic.ejerc007.Entity.Cine;
-import es.cic.ejerc007.Entity.Sala;
 import es.cic.ejerc007.Entity.Ticket;
-import es.cic.ejerc007.Repository.ButacaRepository;
-import es.cic.ejerc007.Repository.CineRepository;
-import es.cic.ejerc007.Repository.SalaRepository;
-import es.cic.ejerc007.Repository.SesionRepository;
-import es.cic.ejerc007.Repository.TicketRepository;
+
+public interface CineService {
 
 
-@Service
-public class CineService {
+public void crearCine(Cine cine);
 
-	
-@Autowired
-CineRepository repoCine;
+	void TotalesPorPrecio();
 
+	void TotalesPorSala();
 
-@Autowired
-ButacaRepository repoButaca;
+	void TotalesPorSalaYSesion();
 
-@Autowired
-SalaRepository repoSala;
+	void Comprar(Ticket ticket);
 
-@Autowired
-SesionRepository repoSesion;
+	void Cambiar(Ticket ticket);
 
-@Autowired
-TicketRepository repoTicket;
-
-
-
-public void crearCine(Cine cine) {
-	repoCine.save(cine);
-}
-
-
-
-
+	void Cancelar(Ticket ticket);
 
 }
-
-
