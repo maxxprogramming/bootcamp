@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface CineRepository extends CrudRepository<Cine, Long> {
 	
 	
-	
+	 
 }
 
 
