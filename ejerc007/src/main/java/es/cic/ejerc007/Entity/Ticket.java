@@ -11,7 +11,7 @@ public class Ticket {
 	private List<Butaca> butacas;
 	private Sala sala;
 	private Sesion sesion;
-	private double precioTotal;
+	private static double precioTotal= 5;
 	
 	
 	
