@@ -1,10 +1,11 @@
-package Service;
+package es.cic.ejerc007.Service;
 
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import es.cic.ejerc007.Entity.Sala;
 import es.cic.ejerc007.Entity.Ticket;
 import es.cic.ejerc007.Repository.ButacaRepository;
 import es.cic.ejerc007.Repository.CineRepository;
@@ -33,6 +34,11 @@ SesionRepository repoSesion;
 @Autowired
 TicketRepository repoTicket;
 
+
+
+public void crearCine(Sala sala) {
+	repoCine.save(sala);
+}
 
 
 
