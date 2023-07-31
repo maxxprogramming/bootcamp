@@ -132,8 +132,29 @@ public class CineServiceImpl implements CineService {
 
 	@Override
 	public Map<Sesion,Integer> TotalesPorSesion() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Map<Sesion, Integer> tickets = new  HashMap<Sesion, Integer>();
+		 
+		for(Sala sala: cine.getSalas()) {
+			for (Sesion sesion : sala.getSesiones()) {
+				int numTickets = 0;
+				for(Ticket t : this.tickets) {
+					if(t.getSesion() == sesion) {
+						numTickets++;
+					}	
+				
+				}
+				tickets.put(sesion, numTickets);
+				
+			}
+			
+			
+			
+		}
+		return tickets;
+		
+		
+		
 	}
 
 	private Ticket obtenerTicket(Ticket ticket) {
