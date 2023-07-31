@@ -15,16 +15,19 @@ public class Sala {
 	private Sala() {
 		sesiones = new ArrayList<Sesion>();
 		Sesion s1 = new Sesion();
+		s1.setId(1);
 		s1.setHorario("17:00");
 		s1.setPelicula("Pelicula 1");
 		s1.setSala(this);
 		sesiones.add(s1);
 		Sesion s2 = new Sesion();
+		s2.setId(2);
 		s2.setHorario("20:00");
 		s2.setPelicula("Pelicula 2");
 		s2.setSala(this);
 		sesiones.add(s2);
 		Sesion s3 = new Sesion();
+		s3.setId(3);
 		s3.setHorario("22:30");
 		s3.setPelicula("Pelicula 1");
 		s3.setSala(this);
