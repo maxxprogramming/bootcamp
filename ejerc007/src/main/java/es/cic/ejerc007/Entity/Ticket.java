@@ -7,7 +7,6 @@ public class Ticket {
 
 	private long id;
 	private int butacas;
-	private Sala sala;
 	private Sesion sesion;
 	private static double precioTotal= 5;
 	
@@ -27,14 +26,6 @@ public class Ticket {
 
 	public void setButacas(int butacas) {
 		this.butacas = butacas;
-	}
-
-	public Sala getSala() {
-		return sala;
-	}
-
-	public void setSala(Sala sala) {
-		this.sala = sala;
 	}
 
 	public Sesion getSesion() {

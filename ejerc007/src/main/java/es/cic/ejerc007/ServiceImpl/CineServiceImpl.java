@@ -30,16 +30,10 @@ public class CineServiceImpl implements CineService {
 
 	@Override
 	public void crearCine(Cine cine) {
-		cineRepo.save(cine);
 		if(cine == null) {
 			this.cine=cine;
+			cineRepo.save(this.cine);
 		}
-	}
-
-	@Override
-	public void crearSala(Sala sala) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override

@@ -8,7 +8,6 @@ import es.cic.ejerc007.Entity.Ticket;
 public interface CineService {
 
 	void crearCine(Cine cine);
-	void crearSala(Sala sala);
 	void Comprar(Ticket ticket);
 	
 	void Cambiar(Ticket ticket);
