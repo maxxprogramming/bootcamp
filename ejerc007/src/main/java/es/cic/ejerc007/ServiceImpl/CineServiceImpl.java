@@ -36,27 +36,43 @@ public class CineServiceImpl implements CineService {
 		}
 	}
 
-	@Override
-	public void crearSala(Sala sala) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
-	public void Comprar(Ticket ticket) {
-		// TODO Auto-generated method stub
+	public void Comprar(Ticket ticket) throws Exception {
+			
+		 Sala sala = ticket.getSala();
+		 Sesion sesion = ticket.getSesion();
+		 int butacas = ticket.getButacas();
+		 
+		 
+		 if(sala.getButacas() - butacas >= 0 ) {
+			 sala.setButacas(sala.getButacas() - butacas );
 		
-	}
+			 if(sala.getButacas() >= 5) {
+				 ticket.setPrecioTotal(ticket.getPrecioTotal() *  0.10);
+				 
+			 }
+			 ticketRepo.save(ticket);
+			 
+		 } else {
+			 throw new Exception("no hay butacas en la sala");
+		 }
+		
+		
+	} 
+
+
 
 	@Override
-	public void Cambiar(Ticket ticket) {
-		// TODO Auto-generated method stub
+	public void Cancelar(Ticket ticket) throws Exception {
+		 Sala sala = ticket.getSala();
+		 Sesion sesion = ticket.getSesion();
+		 int butacas = ticket.getButacas();
+		 
+		 sala.setButacas(sala.getButacas() + butacas);
+		 ticketRepo.delete(ticket);
 		
-	}
-
-	@Override
-	public void Cancelar(Ticket ticket) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -75,6 +91,41 @@ public class CineServiceImpl implements CineService {
 	@Override
 	public void TotalesPorSalaYSesion() {
 		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void Cambiar(Ticket ticket, Sesion sesion) {
+		
+			Sala sala = sesion.getSala();
+			if (sala.getButacas() - ticket.getButacas() >= 0) {
+				Sala salaEdit = ticket.getSesion().getSala();
+				salaEdit.setButacas(salaEdit.getButacas() + ticket.getButacas());
+				ticket.setSala(sesion.getSala());
+				ticket.setSesion(sesion);
+				ticketRepo.save(ticket);
+				
+			} 
+
+	}
+
+
+
+	@Override
+	public void Cambiar(Ticket ticket, int butacas) {
+		
+		
+		Sala sala = ticket.getSesion().getSala();
+		
+		sala.setButacas(sala.getButacas() + ticket.getButacas());
+		
+		
+			if (sala.getButacas() - butacas >= 0) {
+				ticket.setButacas(butacas);
+				ticketRepo.save(ticket);
+			}
 		
 	}
 
