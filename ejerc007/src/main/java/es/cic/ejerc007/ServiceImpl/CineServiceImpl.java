@@ -8,7 +8,6 @@ import es.cic.ejerc007.Entity.Cine;
 import es.cic.ejerc007.Entity.Sala;
 import es.cic.ejerc007.Entity.Sesion;
 import es.cic.ejerc007.Entity.Ticket;
-import es.cic.ejerc007.Repository.ButacaRepository;
 import es.cic.ejerc007.Repository.CineRepository;
 import es.cic.ejerc007.Repository.SalaRepository;
 import es.cic.ejerc007.Repository.SesionRepository;
@@ -22,8 +21,6 @@ public class CineServiceImpl implements CineService {
 	private CineRepository cineRepo;
 	@Autowired
 	private SalaRepository salaRepo;
-	@Autowired
-	private ButacaRepository butacaRepo;
 	@Autowired
 	private SesionRepository sesionRepo;
 	@Autowired
@@ -40,39 +37,47 @@ public class CineServiceImpl implements CineService {
 	}
 
 	@Override
-	public void TotalesPorPrecio() {
+	public void crearSala(Sala sala) {
 		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void TotalesPorSala() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void TotalesPorSalaYSesion() {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	public void Comprar(Ticket ticket) {
+		// TODO Auto-generated method stub
 		
-
 	}
 
 	@Override
 	public void Cambiar(Ticket ticket) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	public void Cancelar(Ticket ticket) {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	@Override
+	public void TotalesPorPrecio() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void TotalesPorSala() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void TotalesPorSalaYSesion() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 
 }

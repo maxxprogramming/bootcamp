@@ -9,17 +9,18 @@ public interface CineService {
 
 	void crearCine(Cine cine);
 	void crearSala(Sala sala);
-
+	void Comprar(Ticket ticket);
+	
+	void Cambiar(Ticket ticket);
+	
+	void Cancelar(Ticket ticket);
+	
 	void TotalesPorPrecio();
 
 	void TotalesPorSala();
 
 	void TotalesPorSalaYSesion();
 
-	void Comprar(Ticket ticket);
 
-	void Cambiar(Ticket ticket);
-
-	void Cancelar(Ticket ticket);
 
 }
